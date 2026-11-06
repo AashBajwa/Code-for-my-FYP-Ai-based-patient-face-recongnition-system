@@ -1,0 +1,569 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fc;
+    color: #26364b;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 255px;
+    background: #102b46;
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.logo-icon {
+    background: #16a6bd;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.logo h2 {
+    font-size: 19px;
+}
+
+.logo span {
+    font-size: 11px;
+    color: #a8c1d8;
+}
+
+.menu-heading {
+    font-size: 11px;
+    color: #829bb4;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #c4d2e0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #167f9c;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.logout {
+    display: block;
+    padding: 13px;
+    background: #203f5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #d94d4d;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 255px;
+    width: calc(100% - 255px);
+    padding: 30px;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h2 {
+    font-size: 25px;
+    color: #142f4a;
+}
+
+.topbar p {
+    color: #8290a0;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.profile-icon {
+    background: #d9eef5;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.profile h4 {
+    font-size: 14px;
+}
+
+.profile span {
+    font-size: 11px;
+    color: #8795a5;
+}
+
+
+/* Welcome Box */
+.welcome-box {
+    background: linear-gradient(120deg, #12527b, #168ca6);
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.welcome-box h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.welcome-box p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #e2f5ff;
+}
+
+.welcome-icon {
+    font-size: 85px;
+    opacity: 0.8;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #12617f;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #dff4fa;
+    transform: translateY(-2px);
+}
+
+
+/* Statistics Cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.blue {
+    background: #e2f0ff;
+}
+
+.green {
+    background: #e1f8ed;
+}
+
+.orange {
+    background: #fff0df;
+}
+
+.purple {
+    background: #f0e8ff;
+}
+
+.stat-card h3 {
+    font-size: 13px;
+    color: #768598;
+}
+
+.stat-card h1 {
+    font-size: 27px;
+    margin: 10px 0;
+    color: #18334e;
+}
+
+.stat-card p {
+    font-size: 11px;
+    color: #a0aab6;
+}
+
+
+/* Sections */
+.section {
+    margin-top: 35px;
+    scroll-margin-top: 25px;
+}
+
+.section h2 {
+    font-size: 21px;
+    color: #173550;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: #8996a5;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* Quick Actions */
+.action-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.action-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #26364b;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.action-card span {
+    font-size: 30px;
+}
+
+.action-card h3 {
+    font-size: 16px;
+    margin: 15px 0 8px;
+}
+
+.action-card p {
+    font-size: 12px;
+    color: #8795a5;
+}
+
+
+/* Content Cards */
+.content-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+}
+
+
+/* Registration Form */
+.patient-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce4ec;
+    border-radius: 7px;
+    outline: none;
+    background: #fbfdff;
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #168ca6;
+}
+
+.form-group textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.patient-form .primary-btn {
+    background: #167f9c;
+    color: white;
+    width: fit-content;
+}
+
+
+/* Face Recognition */
+.recognition-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed #b6cbd9;
+}
+
+.camera-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.recognition-card h3 {
+    margin-bottom: 10px;
+}
+
+.recognition-card p {
+    color: #8493a3;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.recognition-card input {
+    padding: 10px;
+    max-width: 100%;
+}
+
+.recognition-card .note {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* Patient Table */
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background: #edf5fa;
+    color: #294861;
+    font-size: 12px;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 12px;
+}
+
+.status {
+    background: #e1f8ed;
+    color: #168454;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 45px;
+    padding: 20px;
+    color: #8996a5;
+    font-size: 12px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 190px;
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+        width: calc(100% - 190px);
+        padding: 18px;
+    }
+
+    .action-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-box h1 {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .sidebar {
+        width: 65px;
+        padding: 15px 7px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo > div:last-child,
+    .menu-heading,
+    .sidebar-menu a:not(.active) {
+        display: none;
+    }
+
+    .sidebar-menu a {
+        font-size: 0;
+        text-align: center;
+    }
+
+    .sidebar-menu a.active {
+        font-size: 12px;
+    }
+
+    .main-content {
+        margin-left: 65px;
+        width: calc(100% - 65px);
+        padding: 12px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .profile {
+        gap: 5px;
+    }
+
+    .profile > div:last-child {
+        display: none;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+
+}

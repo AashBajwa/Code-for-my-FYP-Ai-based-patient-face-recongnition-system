@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Patient Recognition - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+            <div>
+                <h2>AI Patient</h2>
+                <span>Recognition System</span>
+            </div>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav class="sidebar-menu">
+            <a href="#overview" class="active">▦ Dashboard</a>
+            <a href="#registration">✚ Register Patient</a>
+            <a href="#recognition">◉ Face Recognition</a>
+            <a href="#records">▤ Patient Records</a>
+            <a href="#disease">♡ Disease Information</a>
+            <a href="#reports">▥ Reports</a>
+            <a href="#settings">⚙ Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout">↪ Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Top Navbar -->
+        <header class="topbar">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Welcome to AI Patient Recognition System</p>
+            </div>
+
+            <div class="profile">
+                <div class="notification">🔔</div>
+                <div class="profile-icon">👨‍⚕️</div>
+                <div>
+                    <h4>Admin</h4>
+                    <span>Administrator</span>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Overview -->
+        <section id="overview">
+
+            <div class="welcome-box">
+                <div>
+                    <h1>Welcome Back, Admin!</h1>
+                    <p>Manage patients and recognize faces with AI technology.</p>
+                    <a href="#recognition" class="primary-btn">
+                        Start Face Recognition
+                    </a>
+                </div>
+
+                <div class="welcome-icon">🏥</div>
+            </div>
+
+
+            <!-- Statistics Cards -->
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">👥</div>
+                    <h3>Total Patients</h3>
+                    <h1>250</h1>
+                    <p>Registered patients</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <h3>Recognized Faces</h3>
+                    <h1>180</h1>
+                    <p>Recognition records</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">✚</div>
+                    <h3>New Patients</h3>
+                    <h1>35</h1>
+                    <p>Recently registered</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">▤</div>
+                    <h3>Medical Reports</h3>
+                    <h1>120</h1>
+                    <p>Available reports</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <section class="section">
+            <h2>Quick Actions</h2>
+            <p class="section-description">Choose an action to continue.</p>
+
+            <div class="action-container">
+
+                <a href="#registration" class="action-card">
+                    <span>➕</span>
+                    <h3>Register Patient</h3>
+                    <p>Add a new patient record</p>
+                </a>
+
+                <a href="#recognition" class="action-card">
+                    <span>📷</span>
+                    <h3>Face Recognition</h3>
+                    <p>Identify a registered patient</p>
+                </a>
+
+                <a href="#records" class="action-card">
+                    <span>📋</span>
+                    <h3>View Records</h3>
+                    <p>Manage patient information</p>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Patient Registration -->
+        <section class="section" id="registration">
+            <h2>Register New Patient</h2>
+            <p class="section-description">Add basic patient information.</p>
+
+            <div class="content-card">
+                <form class="patient-form">
+
+                    <div class="form-group">
+                        <label>Patient Name</label>
+                        <input type="text" placeholder="Enter patient name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" placeholder="Enter age">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select>
+                            <option>Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Disease Information</label>
+                        <textarea placeholder="Enter disease information"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Patient Face Image</label>
+                        <input type="file" accept="image/*">
+                    </div>
+
+                    <button type="button" class="primary-btn">
+                        Register Patient
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+
+        <!-- Face Recognition -->
+        <section class="section" id="recognition">
+            <h2>AI Face Recognition</h2>
+            <p class="section-description">
+                Upload a patient image to begin the recognition workflow.
+            </p>
+
+            <div class="recognition-card">
+                <div class="camera-icon">📸</div>
+                <h3>Upload Patient Face Image</h3>
+                <p>Select a clear image of the patient's face.</p>
+
+                <input type="file" accept="image/*">
+
+                <p class="note">
+                    AI recognition will be connected with the Python backend.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Patient Records -->
+        <section class="section" id="records">
+            <h2>Recent Patient Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Disease</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>PT-001</td>
+                            <td>Ali Ahmed</td>
+                            <td>35</td>
+                            <td>Male</td>
+                            <td>Diabetes</td>
+                            <td><span class="status">Registered</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>PT-002</td>
+                            <td>Sara Khan</td>
+                            <td>28</td>
+                            <td>Female</td>
+                            <td>Blood Pressure</td>
+                            <td><span class="status">Registered</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>PT-003</td>
+                            <td>Usman Ali</td>
+                            <td>42</td>
+                            <td>Male</td>
+                            <td>Heart Disease</td>
+                            <td><span class="status">Registered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- Disease Information -->
+        <section class="section" id="disease">
+            <h2>Disease Information</h2>
+
+            <div class="action-container">
+                <div class="action-card">
+                    <span>🩺</span>
+                    <h3>Diabetes</h3>
+                    <p>Medical information and patient history.</p>
+                </div>
+
+                <div class="action-card">
+                    <span>❤️</span>
+                    <h3>Heart Disease</h3>
+                    <p>Medical information and patient history.</p>
+                </div>
+
+                <div class="action-card">
+                    <span>💓</span>
+                    <h3>Blood Pressure</h3>
+                    <p>Medical information and patient history.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Reports -->
+        <section class="section" id="reports">
+            <h2>Reports</h2>
+            <div class="content-card">
+                <p>Patient reports and recognition history will appear here.</p>
+            </div>
+        </section>
+
+
+        <!-- Settings -->
+        <section class="section" id="settings">
+            <h2>Settings</h2>
+            <div class="content-card">
+                <p>Manage your account and system settings here.</p>
+            </div>
+        </section>
+
+
+        <footer>
+            <p>© 2026 AI Patient Face Recognition System. All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

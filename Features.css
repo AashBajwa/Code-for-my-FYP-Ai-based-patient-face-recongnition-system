@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  }
+
+body {
+background: #f4f8fb;
+color: #243447;
+}
+
+/* Navigation Bar */
+header {
+background: #102a43;
+padding: 20px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 27px;
+font-weight: bold;
+color: white;
+}
+
+.logo span {
+color: #00d4c8;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 22px;
+font-size: 15px;
+transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+color: #00d4c8;
+}
+
+/* Hero Section */
+.hero {
+text-align: center;
+padding: 65px 20px;
+background: linear-gradient(135deg, #102a43, #087e8b);
+color: white;
+}
+
+.hero h1 {
+font-size: 42px;
+margin-bottom: 15px;
+}
+
+.hero p {
+font-size: 17px;
+color: #d7f5f5;
+}
+
+/* Features Section */
+.features {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+padding: 55px 7%;
+}
+
+.feature-card {
+background: white;
+padding: 30px 20px;
+text-align: center;
+border-radius: 15px;
+box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+transition: 0.4s;
+border-bottom: 4px solid #00b8a9;
+}
+
+.feature-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.icon {
+font-size: 42px;
+margin-bottom: 18px;
+}
+
+.feature-card h2 {
+font-size: 19px;
+color: #087e8b;
+margin-bottom: 13px;
+}
+
+.feature-card p {
+font-size: 14px;
+line-height: 1.7;
+color: #607080;
+}
+
+/* Footer */
+footer {
+background: #102a43;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+.features {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+header {
+flex-direction: column;
+gap: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    margin: 0;
+}
+
+.features {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+}
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
